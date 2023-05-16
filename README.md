@@ -12,5 +12,13 @@ This is a project in the form of a test assignment for enrollment in the trainin
 
 Here you can see Postman request:
 
-![result](https://github.com/shelbi1/Neoflex-Testcase/assets/31365702/799d5828-6f06-426f-86ac-e82dbf90ae5e)
+
+![result](https://github.com/shelbi1/Neoflex-Testcase/assets/31365702/f03f4fb3-740c-479b-a257-b9c7acd29115)
+
+
+
+
+The formula is pretty clear, you can check it out, it's down below: 
+
+![formula](https://github.com/shelbi1/Neoflex-Testcase/assets/31365702/86c3c32b-54c9-420d-8e6d-545344e0e084)
 
