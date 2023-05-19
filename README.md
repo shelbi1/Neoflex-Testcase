@@ -2,7 +2,7 @@
 
 Hey! ♡
 
-This is a project in the form of a test assignment for enrollment in the training center of Neoflex that ___calculates the amount of vacation pay for an employee___.
+This project calculates the amount of vacation pay for an employee.
 
 * __The input__ of the program is:
   * the average salary for the year 
