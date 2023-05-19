@@ -18,7 +18,7 @@ class NeoflexApplicationTests {
 	@Test
 	public void CalculateHolidayPayTest() {
 
-		CalculatorDTO calculatorDTO = new CalculatorDTO(480000, 4);
+		CalculatorDTO calculatorDTO = new CalculatorDTO(480000, 4, null, null);
 		double result = 0;
 		if (calculatorService.CalculateHolidayPay(calculatorDTO).getHttpStatus() == HttpStatus.OK) {
 			result = calculatorService.Calculate(480000, 4);

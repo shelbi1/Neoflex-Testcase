@@ -11,13 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class MainController {
+public class CalculatorController {
 
     @Autowired
     private CalculatorService calculatorService;
 
-    ///@RequestParam(name = "start") @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate vacationStartDate,
-    //@RequestParam(name = "end") @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate vacationEndDate
     @GetMapping(value="/calculate")
     public ResponseEntity<String> calculate (@RequestBody CalculatorDTO calculatorDTO) {
 
@@ -25,4 +23,6 @@ public class MainController {
 
         return new ResponseEntity<> (response.getMessage(), response.getHttpStatus());
     }
+
+
 }
