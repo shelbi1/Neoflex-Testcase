@@ -22,12 +22,9 @@ class NeoflexApplicationTests {
 
         // given
         CalculatorDTO calculatorDTO = new CalculatorDTO(480000, 4, null, null);
-        double result = 0;
 
         // when
-        if (calculatorService.CalculateHolidayPay(calculatorDTO).getHttpStatus() == HttpStatus.OK) {
-            result = calculatorService.Calculate(480000, 4);
-        }
+        double result = calculatorService.Calculate(480000, 4);
 
         //then
         double expected = 5460.75;
@@ -42,12 +39,9 @@ class NeoflexApplicationTests {
 
         // given
         CalculatorDTO calculatorDTO = new CalculatorDTO(480000, 0, startDate, endDate);
-        double result = 0;
 
         // when
-        if (calculatorService.CalculateHolidayPay(calculatorDTO).getHttpStatus() == HttpStatus.OK) {
-            result = calculatorService.Calculate(480000, startDate, endDate);
-        }
+        double result = calculatorService.Calculate(480000, startDate, endDate);
 
         //then
         double expected = 5460.75;
