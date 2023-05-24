@@ -60,10 +60,25 @@ I also took care of catching possible exceptions, including incorrect input para
 In those cases you will have HTTP status = _BAD_REQUEST_ and a message of the catched exception. 
 
 For example, negative amount of the salary or zero number of vacation days. Also if the start date of the vacation would be after the end date, you will have appropriate message. 
-You can find the description of exceptions in ```CalculatorService.java → ValidateInputParams(...)```
+You can find the conditions for throwing out exceptions in ```CalculatorService.java → ValidateInputParams(...)```
 
 ![start date after end date](https://github.com/shelbi1/Neoflex-Testcase/assets/31365702/dd5c0a92-7837-4c11-8f58-e1ba63cadffd)
 
 ---
 
 ### Tests
+
+You can find my created tests in: ```src → test → java → com.project.neoflex → NeoflexApplicationTests```
+
+There you can see tests such as:
+
+![tests](https://github.com/shelbi1/Neoflex-Testcase/assets/31365702/d4ec8010-5ffa-4229-935e-2b888c8a12ae)
+
+1. Test for model with number of vacation days
+2. Test for model with start and end date of the vacation
+3. Test for catching common exceptions (e.g. incorrect amount of average salary/vacation days, or when start date is after end date)
+
+
+You can check out my test coverage for CalculateHolidayPayWithDates here:
+
+![test coverage](https://github.com/shelbi1/Neoflex-Testcase/assets/31365702/1cba5462-1c5e-427b-954a-1228d1c0dafb)
