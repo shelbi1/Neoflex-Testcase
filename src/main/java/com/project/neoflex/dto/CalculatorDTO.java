@@ -10,10 +10,10 @@ public class CalculatorDTO {
     private LocalDate endDate;
 
     public CalculatorDTO(int averageYearSalary, int amountOfHolidayDays, LocalDate startDate, LocalDate endDate) {
-        this.averageYearSalary = averageYearSalary;
-        this.amountOfHolidayDays = amountOfHolidayDays;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        setAverageYearSalary(averageYearSalary);
+        setAmountOfHolidayDays(amountOfHolidayDays);
+        setStartDate(startDate);
+        setEndDate(endDate);
     }
 
     public int getAverageYearSalary() {
