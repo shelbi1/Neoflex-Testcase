@@ -51,48 +51,38 @@ class NeoflexApplicationTests {
     @Test
     public void catchCommonExceptions() {
 
+        HttpStatus errorHttpCode = HttpStatus.BAD_REQUEST;
+
         // ---- Incorrect amount of average salary ----
         // given
         CalculatorDTO calculatorDTO1 = new CalculatorDTO(-1, 4, null, null);
-        boolean result1 = false;
 
         // when
-        if (calculatorService.CalculateHolidayPay(calculatorDTO1).getHttpStatus() == HttpStatus.BAD_REQUEST) {
-            result1 = true;
-        }
+        HttpStatus result1 = calculatorService.CalculateHolidayPay(calculatorDTO1).getHttpStatus();
 
         // then
-        boolean expected1 = true;
-        assertEquals(result1, expected1);
+        assertEquals(result1, errorHttpCode);
 
         // ---- Incorrect number of vacation days ----
         // given
         CalculatorDTO calculatorDTO2 = new CalculatorDTO(480000, 0, null, null);
-        boolean result2 = false;
 
         // when
-        if (calculatorService.CalculateHolidayPay(calculatorDTO2).getHttpStatus() == HttpStatus.BAD_REQUEST) {
-            result2 = true;
-        }
+        HttpStatus result2 = calculatorService.CalculateHolidayPay(calculatorDTO2).getHttpStatus();
 
         // then
-        boolean expected2 = true;
-        assertEquals(result2, expected2);
+        assertEquals(result2, errorHttpCode);
 
         // ---- Start date is after end date ----
         // given
-        CalculatorDTO calculatorDTO = new CalculatorDTO(480000, 0,
+        CalculatorDTO calculatorDTO3 = new CalculatorDTO(480000, 0,
                 LocalDate.parse("2023-04-04"), LocalDate.parse("2023-01-01"));
-        boolean result3 = false;
 
         // when
-        if (calculatorService.CalculateHolidayPay(calculatorDTO2).getHttpStatus() == HttpStatus.BAD_REQUEST) {
-            result3 = true;
-        }
+        HttpStatus result3 = calculatorService.CalculateHolidayPay(calculatorDTO2).getHttpStatus();
 
         // then
-        boolean expected3 = true;
-        assertEquals(result3, expected3);
+        assertEquals(result3, errorHttpCode);
     }
 
 }
