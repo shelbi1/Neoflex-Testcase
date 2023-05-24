@@ -80,7 +80,7 @@ public class CalculatorService {
     public void ValidateInputParams(int averageYearSalary, int amountOfHolidayDays, LocalDate startDate, LocalDate endDate) {
 
         if (averageYearSalary <= 0) {
-            throw new CommonException("Incorrect amount of salary");
+            throw new CommonException("Incorrect amount of average salary");
         }
         if ((amountOfHolidayDays <= 0 && startDate == null) || amountOfHolidayDays > 365) {
             throw new CommonException("Incorrect number of vacation days");
