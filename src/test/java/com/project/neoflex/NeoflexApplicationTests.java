@@ -79,7 +79,7 @@ class NeoflexApplicationTests {
                 LocalDate.parse("2023-04-04"), LocalDate.parse("2023-01-01"));
 
         // when
-        HttpStatus result3 = calculatorService.CalculateHolidayPay(calculatorDTO2).getHttpStatus();
+        HttpStatus result3 = calculatorService.CalculateHolidayPay(calculatorDTO3).getHttpStatus();
 
         // then
         assertEquals(result3, errorHttpCode);
